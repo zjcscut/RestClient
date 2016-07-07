@@ -1,0 +1,32 @@
+/*.error_prompt {*/
+    /*-fx-prompt-text-fill: red;*/
+/*}*/
+
+/*.error_prompt:focused {*/
+    /*-fx-prompt-text-fill: transparent;*/
+/*}*/
+
+/*labelButton {*/
+    /*-fx-background-color: #9D0B0F;*/
+    /*-fx-text-fill: white;*/
+/*}*/
+
+/*Button {*/
+    /*-fx-background-color: #53AF36;*/
+    /*-fx-text-fill: white;*/
+/*}*/
+
+/*Button:hover {*/
+    /*-fx-background-color: #428C2B;*/
+/*}*/
+
+/*#button_refresh {*/
+    /*-fx-background-image: url("../img/refresh.png");*/
+    /*-fx-background-position: center;*/
+/*}*/
+
+/*#button_refresh_animate {*/
+    /*-fx-background-image: url("../img/loader.gif");*/
+    /*-fx-background-position: center;*/
+    /*-fx-background-repeat: stretch;*/
+/*}*/

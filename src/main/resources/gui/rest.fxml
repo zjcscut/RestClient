@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <!--<ImageView fx:id="background" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">-->
+            <!--<Image url="@../img/logo.jpeg"/>-->
+            <!--<viewport>-->
+                <!--<Rectangle2D />-->
+            <!--</viewport>-->
+        <!--</ImageView>-->
+        <Label layoutX="34.0" layoutY="18.0" prefHeight="36.0" prefWidth="89.0" text="URL" AnchorPane.bottomAnchor="546.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="677.0" AnchorPane.topAnchor="18.0">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <TextField fx:id="url" layoutX="88.0" layoutY="20.0" prefHeight="28.0" prefWidth="427.0" AnchorPane.bottomAnchor="546.0" AnchorPane.topAnchor="18.0" />
+        <Button fx:id="send" layoutX="684.0" layoutY="25.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="77.0" text="Send" AnchorPane.bottomAnchor="546.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="18.0" />
+        <ChoiceBox fx:id="method" layoutX="527.0" layoutY="18.0" prefWidth="150.0" AnchorPane.bottomAnchor="546.0" AnchorPane.topAnchor="18.0" />
+        <TextArea fx:id="response" layoutX="34.0" layoutY="233.0" prefHeight="297.0" prefWidth="732.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="34.0" />
+        <Label layoutX="34.0" layoutY="191.0" prefHeight="36.0" prefWidth="230.0" text="Response Content" textFill="#ee0d0d">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Button fx:id="json" layoutX="34.0" layoutY="539.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="115.0" text="Json Format" />
+        <Button fx:id="clear" layoutX="160.0" layoutY="539.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="115.0" text="Clear" />
+      <TableView layoutX="38.0" layoutY="99.0" prefHeight="87.0" prefWidth="292.0" AnchorPane.bottomAnchor="414.0" AnchorPane.topAnchor="99.0">
+        <columns>
+          <TableColumn prefWidth="145.0" text="Key" />
+          <TableColumn prefWidth="146.0" text="Value" />
+        </columns>
+      </TableView>
+      <Label layoutX="120.0" layoutY="58.0" prefHeight="36.0" prefWidth="126.0" text=" Headers Table" textFill="#eb0c0c" AnchorPane.bottomAnchor="506.0" AnchorPane.topAnchor="58.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TableView layoutX="381.0" layoutY="98.0" prefHeight="87.0" prefWidth="384.0" AnchorPane.bottomAnchor="414.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="99.0">
+         <columns>
+            <TableColumn prefWidth="186.0" text="Key"/>
+            <TableColumn prefWidth="196.0" text="Value"/>
+         </columns>
+      </TableView>
+      <Label layoutX="515.0" layoutY="58.0" prefHeight="36.0" prefWidth="126.0" text=" Params Table" textFill="#eb0c0c" AnchorPane.bottomAnchor="506.0" AnchorPane.topAnchor="58.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
