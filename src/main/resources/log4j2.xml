@@ -1,37 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="WARN" monitorInterval="30">
+<Configuration status="WARN">
+
+    <properties>
+        <property name="logPath">log</property>
+    </properties>
+
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %c{1}:%L - %msg%n"/>
+
         </Console>
-        <RollingFile name="DetailLog"
-                     fileName="logs/debug.log"
-                     filePattern="logs/rap.detail.%d{yyyy_MM_dd}.PART_%i.log">
-            <PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n"/>
+
+
+        <RollingFile name="debugFile" filename="${logPath}/debug.log"
+                     filepattern="${logPath}/%d{yyyy-MM-dd HH:mm:ss}-debug.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %c{1}:%L - %msg%n"/>
+            <Filters>
+                <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
             <Policies>
                 <SizeBasedTriggeringPolicy size="100 MB"/>
             </Policies>
-            <DefaultRolloverStrategy max="1000"/>
+            <DefaultRolloverStrategy max="20"/>
         </RollingFile>
-        <RollingFile name="ErrorLog"
-                     fileName="logs/error.log"
-                     filePattern="logs/rap.error.%d{yyyy_MM_dd}.PART_%i.log">
-            <PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n"/>
+
+        <RollingFile name="errorFile" filename="${logPath}/error.log"
+                     filepattern="${logPath}/%d{yyyy-MM-dd HH:mm:ss}-error.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %c{1}:%L - %msg%n"/>
+            <Filters>
+                <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
             <Policies>
-                <SizeBasedTriggeringPolicy size="100 KB"/>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
             </Policies>
-            <DefaultRolloverStrategy max="10"/>
+            <DefaultRolloverStrategy max="20"/>
         </RollingFile>
+
     </Appenders>
     <Loggers>
-        <Logger name="errorLogger" level="error">
-            <AppenderRef ref="ErrorLog"/>
-        </Logger>
-        <Logger name="detailLogger" level="warn">
-            <AppenderRef ref="DetailLog"/>
-        </Logger>
-        <Root level="DEBUG">
+
+        <Root level="debug">
             <AppenderRef ref="Console"/>
+            <!-- <AppenderRef ref="LogFile" /> -->
+            <AppenderRef ref="debugFile"/>
+            <AppenderRef ref="errorFile"/>
         </Root>
     </Loggers>
 </Configuration>

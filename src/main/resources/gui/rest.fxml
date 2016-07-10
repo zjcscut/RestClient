@@ -1,55 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+<?import javafx.geometry.Rectangle2D?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0"
+            prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <!--<ImageView fx:id="background" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">-->
-            <!--<Image url="@../img/logo.jpeg"/>-->
-            <!--<viewport>-->
-                <!--<Rectangle2D />-->
-            <!--</viewport>-->
+        <!--<Image url="@../img/logo.jpeg"/>-->
+        <!--<viewport>-->
+        <!--<Rectangle2D />-->
+        <!--</viewport>-->
         <!--</ImageView>-->
-        <Label layoutX="34.0" layoutY="18.0" prefHeight="36.0" prefWidth="89.0" text="URL" AnchorPane.bottomAnchor="546.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="677.0" AnchorPane.topAnchor="18.0">
+        <Label layoutX="21.0" layoutY="12.0" prefHeight="42.0" prefWidth="55.0" text="URL"
+               AnchorPane.bottomAnchor="846.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="1124.0"
+               AnchorPane.topAnchor="21.0">
             <font>
-                <Font size="25.0" />
+                <Font size="25.0"/>
             </font>
         </Label>
-        <TextField fx:id="url" layoutX="88.0" layoutY="20.0" prefHeight="28.0" prefWidth="427.0" AnchorPane.bottomAnchor="546.0" AnchorPane.topAnchor="18.0" />
-        <Button fx:id="send" layoutX="684.0" layoutY="25.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="77.0" text="Send" AnchorPane.bottomAnchor="546.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="18.0" />
-        <ChoiceBox fx:id="method" layoutX="527.0" layoutY="18.0" prefWidth="150.0" AnchorPane.bottomAnchor="546.0" AnchorPane.topAnchor="18.0" />
-        <TextArea fx:id="response" layoutX="34.0" layoutY="233.0" prefHeight="297.0" prefWidth="732.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="34.0" />
-        <Label layoutX="34.0" layoutY="191.0" prefHeight="36.0" prefWidth="230.0" text="Response Content" textFill="#ee0d0d">
+        <TextField fx:id="url" layoutX="79.0" layoutY="21.0" prefHeight="33.0" prefWidth="789.0"
+                   AnchorPane.bottomAnchor="846.0" AnchorPane.leftAnchor="79.0" AnchorPane.rightAnchor="332.0"
+                   AnchorPane.topAnchor="21.0"/>
+        <Button fx:id="send" layoutX="684.0" layoutY="25.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="126.0"
+                text="Send" AnchorPane.bottomAnchor="846.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="21.0"/>
+        <ChoiceBox fx:id="method" layoutX="885.0" layoutY="17.0" prefHeight="42.0" prefWidth="150.0"
+                   AnchorPane.bottomAnchor="846.0" AnchorPane.topAnchor="21.0"/>
+        <TextArea fx:id="response" layoutX="21.0" layoutY="558.0" prefHeight="275.0" prefWidth="1158.0"
+                  AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="21.0"/>
+        <Label layoutX="21.0" layoutY="515.0" prefHeight="36.0" prefWidth="230.0" text="Response Content"
+               textFill="#ee0d0d" AnchorPane.leftAnchor="21.0">
             <font>
-                <Font size="25.0" />
+                <Font size="25.0"/>
             </font>
         </Label>
-        <Button fx:id="json" layoutX="34.0" layoutY="539.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="115.0" text="Json Format" />
-        <Button fx:id="clear" layoutX="160.0" layoutY="539.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="115.0" text="Clear" />
-      <TableView layoutX="38.0" layoutY="99.0" prefHeight="87.0" prefWidth="292.0" AnchorPane.bottomAnchor="414.0" AnchorPane.topAnchor="99.0">
-        <columns>
-          <TableColumn prefWidth="145.0" text="Key" />
-          <TableColumn prefWidth="146.0" text="Value" />
-        </columns>
-      </TableView>
-      <Label layoutX="120.0" layoutY="58.0" prefHeight="36.0" prefWidth="126.0" text=" Headers Table" textFill="#eb0c0c" AnchorPane.bottomAnchor="506.0" AnchorPane.topAnchor="58.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
-      <TableView layoutX="381.0" layoutY="98.0" prefHeight="87.0" prefWidth="384.0" AnchorPane.bottomAnchor="414.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="99.0">
-         <columns>
-            <TableColumn prefWidth="186.0" text="Key"/>
-            <TableColumn prefWidth="196.0" text="Value"/>
-         </columns>
-      </TableView>
-      <Label layoutX="515.0" layoutY="58.0" prefHeight="36.0" prefWidth="126.0" text=" Params Table" textFill="#eb0c0c" AnchorPane.bottomAnchor="506.0" AnchorPane.topAnchor="58.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
+        <Button fx:id="json" layoutX="31.0" layoutY="838.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="115.0"
+                text="Json Format" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="21.0"/>
+        <Button fx:id="clear" layoutX="158.0" layoutY="838.0" mnemonicParsing="false" prefHeight="36.0"
+                prefWidth="115.0" text="Clear" AnchorPane.bottomAnchor="21.0"/>
+
+
+        <TableView fx:id="headersTable" layoutX="15.0" layoutY="111.0" prefHeight="303.0" prefWidth="369.0"
+                   AnchorPane.bottomAnchor="486.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="810.0"
+                   AnchorPane.topAnchor="111.0">
+            <!--<columns>-->
+            <!--<TableColumn id="headerChoose" prefWidth="24.0" />-->
+            <!--<TableColumn id="headerKey" prefWidth="158.0" text="Key" />-->
+            <!--<TableColumn id="headerVal" prefWidth="187.0" text="Value" />-->
+            <!--</columns>-->
+        </TableView>
+
+
+        <Label layoutX="139.0" layoutY="65.0" prefHeight="36.0" prefWidth="126.0" text=" Headers Table"
+               textFill="#eb0c0c" AnchorPane.bottomAnchor="799.0" AnchorPane.topAnchor="65.0">
+            <font>
+                <Font size="17.0"/>
+            </font>
+        </Label>
+
+
+
+        <Label layoutX="879.0" layoutY="65.0" prefHeight="36.0" prefWidth="126.0" text=" Params Table"
+               textFill="#eb0c0c" AnchorPane.bottomAnchor="799.0" AnchorPane.rightAnchor="195.0"
+               AnchorPane.topAnchor="65.0">
+            <font>
+                <Font size="17.0"/>
+            </font>
+        </Label>
+        <Button fx:id="addHeader" layoutX="21.0" layoutY="472.0" mnemonicParsing="false" prefHeight="33.0"
+                prefWidth="183.0" text="Add column" AnchorPane.bottomAnchor="395.0" AnchorPane.leftAnchor="21.0"
+                AnchorPane.topAnchor="472.0"/>
+        <Button fx:id="delHeader" layoutX="215.0" layoutY="472.0" mnemonicParsing="false" prefHeight="33.0"
+                prefWidth="174.0" text="Del batch" AnchorPane.bottomAnchor="395.0" AnchorPane.topAnchor="472.0"/>
+        <ImageView fx:id="doge" fitHeight="303.0" fitWidth="345.0" layoutX="400.0" layoutY="111.0" pickOnBounds="true"
+                   preserveRatio="true" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="455.0">
+            <image>
+                <Image url="@../img/doge.png"/>
+            </image>
+            <viewport>
+                <Rectangle2D/>
+            </viewport>
+        </ImageView>
+        <TextField fx:id="addHeaderKey" layoutX="21.0" layoutY="427.0" prefHeight="33.0" prefWidth="183.0"
+                   promptText="key" AnchorPane.bottomAnchor="440.0" AnchorPane.topAnchor="427.0"/>
+        <TextField fx:id="addHeaderVal" layoutX="216.0" layoutY="427.0" prefHeight="33.0" prefWidth="174.0"
+                   promptText="value"/>
+
+
+
+        <TableView fx:id="paramsTable" layoutX="714.0" layoutY="98.0" prefHeight="303.0" prefWidth="465.0"
+                   AnchorPane.bottomAnchor="486.0" AnchorPane.leftAnchor="714.0" AnchorPane.rightAnchor="21.0"
+                   AnchorPane.topAnchor="111.0">
+        </TableView>
+
+        <TextField fx:id="addParamKey" layoutX="715.0" layoutY="434.0" prefHeight="33.0" prefWidth="230.0" promptText="key"
+                   AnchorPane.bottomAnchor="440.0" AnchorPane.leftAnchor="715.0" AnchorPane.topAnchor="427.0"/>
+
+        <TextField fx:id="addParamVal" layoutX="967.0" layoutY="433.0" prefHeight="33.0" prefWidth="212.0" promptText="value"
+                   AnchorPane.bottomAnchor="440.0" AnchorPane.topAnchor="427.0"/>
+
+        <Button fx:id="addParam" layoutX="715.0" layoutY="472.0" mnemonicParsing="false" prefHeight="38.0"
+                prefWidth="230.0" text="Add column" AnchorPane.bottomAnchor="395.0" AnchorPane.leftAnchor="715.0"
+                AnchorPane.topAnchor="467.0"/>
+
+        <Button fx:id="delParam" layoutX="1023.0" layoutY="467.0" mnemonicParsing="false" prefHeight="38.0"
+                prefWidth="212.0" text="Del batch" AnchorPane.bottomAnchor="395.0" AnchorPane.rightAnchor="21.0"
+                AnchorPane.topAnchor="467.0"/>
+
+        <Label layoutX="402.0" layoutY="427.0" prefHeight="53.0" prefWidth="303.0" text="Author：doge"
+               textAlignment="CENTER">
+            <font>
+                <Font size="39.0"/>
+            </font>
+        </Label>
+        <Label layoutX="402.0" layoutY="475.0" prefHeight="53.0" prefWidth="303.0" text="Email：739805340@qq.com">
+            <font>
+                <Font size="22.0"/>
+            </font>
+        </Label>
     </children>
 </AnchorPane>

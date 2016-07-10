@@ -1,7 +1,9 @@
 package cn.zjc.entity;
 
 /**
- * © 2014, Biodiscus.net Robin
+ * @author  zjc
+ * @version 2016/7/8 23:44
+ * @description 
  */
 public class ChooseItem {
     
